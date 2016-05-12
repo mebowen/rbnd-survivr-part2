@@ -1,0 +1,11 @@
+1. Colorizr utilizes ruby's metaprogramming capabilities in the create_colors method by using define_method to dynamically 
+generate all the color methods. 
+
+2. I completed this project over two days in an estimated total of four hours. 
+
+3. This project was not particularly challenging, though I did have a bug in my create_colors method because I didn't realize, 
+at first, that I needed to use "#{colors}" instead of just colors.
+
+4. I relied on the discussion in the survivr1 slack channel to write most of this gem, and I am looking forward to being
+able to write more code without having to look things up and ask questions so often.
+
