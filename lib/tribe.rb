@@ -14,18 +14,19 @@ class Tribe
     end
     
     def print_tribe
-        puts "Tribe #{@name} has the following members: #{@new_tribe}."
+        puts "Tribe #{@name.yellow} has the following members: #{@new_tribe.blue}."
     end
     
     def to_s
         @name
     end
     
-    def tribal_council(options)
-        @immune = options[:immune]
-        @members.each_with_index do |member, index|
-            return @members.delete_at(index) unless member == @immune
-        end
+    def tribal_council(immune = {})
+        @members.reject{|member| member == immune[:immune]}.sample 
+    end
+    
+    def delete(member)
+        @members.delete(member)
     end
     
 end
