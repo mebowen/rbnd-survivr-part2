@@ -1,3 +1,5 @@
+require 'colorizr'
+
 class Tribe
     attr_reader :name
     attr_accessor :members 
@@ -15,6 +17,7 @@ class Tribe
     
     def print_tribe
         puts "Tribe #{@name.yellow} has the following members: #{@new_tribe.blue}."
+        puts
     end
     
     def to_s

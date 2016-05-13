@@ -1,3 +1,5 @@
+require 'colorizr'
+
 class Jury
     attr_accessor :members
     
@@ -29,8 +31,8 @@ class Jury
     
     #sorts total votes by vote count and then returns the finalist with the highest vote count 
     def announce_winner(total_votes)
-        winner = total_votes.sort_by {|finalist, vote_count| vote_count}
-        puts "#{winner.last.first.to_s.capitalize.green} is the winner!" 
+        winner = total_votes.sort_by {|finalist, vote_count| vote_count}.last
+        puts "#{winner[0].to_s.capitalize.green} is the winner!"
+        winner[0]
     end
 end
-
